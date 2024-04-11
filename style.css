@@ -1,0 +1,133 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: clamp(40%, 1vw, 62.5%);
+    --fontFamily:poppins,sans-serif;
+    --textColor:#303030;
+    --blueColor:hsl(194,100%,63%)
+}
+.sr-only{ /*Classe para itens de acessibilidade*/
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+body{
+    width: 100vw;
+    display: grid;
+    justify-items: center;
+    font-size: 1.6rem;
+    color: var(--textColor);
+    font-family: var(--fontFamily);
+}
+
+#app{
+    display: grid;
+    width: fit-content;
+    margin: 0 2rem;
+}
+header{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3.5rem 0 2rem 0;
+}   
+
+header h1{
+    font-size: 2.5rem;
+    margin-right: 2rem;
+}
+
+#search{
+    display: flex;
+}
+
+#search input{
+    font-size: 1.6rem;
+    padding: .6rem 1rem;
+    border: none;
+    border: solid 1px rgba(128, 128, 128, 0.397);
+    border-radius: .4rem 0 0 .4rem;
+
+}
+
+#search button{
+    padding: .6rem;
+    border: none;
+    border: solid 1px rgba(128, 128, 128, 0.397);
+    border-radius: 0 .4rem .4rem 0 ;
+    background-color: var(--blueColor);
+
+}
+table{
+    border-collapse: collapse;
+    box-shadow:0px 5px 10px rgb(160, 160, 160);
+}
+
+table th:first-child{
+    border-top-left-radius: .8rem;
+}
+table th:last-child{
+    border-top-right-radius: .8rem;
+}
+thead th{
+    background-color: var(--blueColor);
+    padding: 1.5rem;
+    text-align: start;
+}
+
+tbody td{
+    align-items: center;
+    padding: 1.2rem;
+    margin-right: 2rem;
+}
+
+tbody td.user{
+    display: flex;
+    gap:1.5rem;
+    text-align: start;
+    margin-right: 2rem;
+}
+
+tbody td a{
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+tbody td a p{
+    font-weight: 600;
+    font-display: flex;
+}
+
+
+tbody td button{
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: none;
+    border: none;
+    color: red;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+tbody img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+table tr:nth-child(odd){
+    background-color: #dddcdc;
+}
+table tr{
+    background-color: #ebe9e9;
+}
+
+
